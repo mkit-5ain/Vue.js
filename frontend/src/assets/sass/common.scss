@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
-@import 'layout.scss';
-@import 'reset.scss';
-@import 'style.scss';
+/*
+    _로 시작하면 css파일로 컴파일 되지 않음
+*/
+@import 'reset';
+@import 'style';
+@import 'layout';
