@@ -1,5 +1,76 @@
 <template>
-    <div id="header">header1</div>
+    <header id="header" class="header top">
+        <div class="text__toggle">
+            <span class="text">
+                <span>W</span>
+            </span>
+            <span class="text">
+                <span>e</span>
+            </span>
+            <span class="text">
+                <span>l</span>
+            </span>
+            <span class="text">
+                <span>c</span>
+            </span>
+            <span class="text">
+                <span>o</span>
+            </span>
+            <span class="text">
+                <span>m</span>
+            </span>
+            <span class="text">
+                <span>e</span>
+            </span>
+            <span class="text">
+                <span>t</span>
+            </span>
+            <span class="text">
+                <span>o</span>
+            </span>
+            <span class="text">
+                <span>t</span>
+            </span>
+            <span class="text">
+                <span>h</span>
+            </span>
+            <span class="text">
+                <span>i</span>
+            </span>
+            <span class="text">
+                <span>s</span>
+            </span>
+            <span class="text">
+                <span>p</span>
+            </span>
+            <span class="text">
+                <span>l</span>
+            </span>
+            <span class="text">
+                <span>a</span>
+            </span>
+            <span class="text">
+                <span>c</span>
+            </span>
+            <span class="text">
+                <span>e</span>
+            </span>
+            <span class="text">
+                <span>.</span>
+            </span>
+        </div>
+        <img class="logo" src="@/assets/image/common/full-logo.svg" alt="limjunesu">
+        <ul class="menu__list">
+            <li class="list scale"><router-link to="/">Home</router-link></li>
+            <li class="list scale"><router-link to="/contact">Contact</router-link></li>
+            <li class="list scale"><router-link to="/Experience">Experience</router-link></li>
+        </ul>
+        <button class="etc--btn scale">
+            <a href="https://github.com/mkit-5ain" target="_blank">
+                <img src="@/assets/image/common/github.png" alt="">
+            </a>
+        </button>
+    </header>
 </template>
 
 <script>
@@ -9,7 +80,7 @@
             this.scroll();
         },
         methods: {
-            scroll: function() {
+            scroll: function () {
                 let scroll = 0;
                 let header = document.getElementById('header');
                 window.addEventListener('scroll', function () {
@@ -32,7 +103,7 @@
         top: 0px;
         left: 0px;
         z-index: 10;
-        width: 100%; 
+        width: 100%;
         height: 50px;
         border-bottom: 1px solid #111;
     }
