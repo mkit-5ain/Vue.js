@@ -1,6 +1,6 @@
 <template>
-    <header id="header" class="header top">
-        <div class="text__toggle">
+    <header id="header" class="header">
+        <section class="text__toggle">
             <span class="text">
                 <span>W</span>
             </span>
@@ -58,7 +58,7 @@
             <span class="text">
                 <span>.</span>
             </span>
-        </div>
+        </section>
         <img class="logo" src="@/assets/image/common/full-logo.svg" alt="limjunesu">
         <ul class="menu__list">
             <li class="list scale"><router-link to="/">Home</router-link></li>
@@ -97,14 +97,4 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-    #header {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        z-index: 10;
-        width: 100%;
-        height: 50px;
-        border-bottom: 1px solid #111;
-    }
-</style>
+<style lang="scss"></style>
