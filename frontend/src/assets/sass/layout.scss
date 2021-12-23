@@ -17,9 +17,25 @@
         font-size: 20px;
         font-weight: bold;
         letter-spacing: -10px;
-        opacity: 0;
-        .text { display: inline-block; overflow: hidden;
+        opacity: 1;
+        .text {
             &:nth-child(7), &:nth-child(9), &:nth-child(13) { padding-right: 10px; }
+            span {
+                display: inline-block;
+                letter-spacing: 0px;
+                transform: translate(0px, 0px);
+                animation: text-toggle;
+                animation-fill-mode: forwards;
+                opacity: 0;
+            }
+            @for $i from 1 through 19 {
+                &:nth-child(#{$i}) {
+                    span {
+                        animation-delay: $i / 4 + s;
+                        animation-duration: $i / 8 + s;
+                    }
+                }
+            }
         }
     }
     .menu__list { @include center; width: 100%; padding-left: 30px;
@@ -39,52 +55,25 @@
             a { font-size: 20px; font-weight: bold; line-height: 0px; color: #fff; }
         }
     }
-    &.top {
-        .logo { top: 8vw; left: 2vw; width: calc(100vw - 4vw); transform: translate(0%, 0vw); }
-        .text__toggle { opacity: 1;
-            .text {
-                span {
-                    display: inline-block;
-                    letter-spacing: 0px;
-                    transform: translate(0px, 0px);
-                    animation: text-toggle;
-                    animation-fill-mode: forwards;
-                    opacity: 0;
-                }
-                @for $i from 1 through 19 {
-                    &:nth-child(#{$i}) {
-                        span {
-                            animation-delay: $i / 4 + s;
-                            animation-duration: $i / 8 + s;
-                        }
-                    }
-                }
-            }
-        }
-        .menu__list {
-            .list { position: relative;
-                &:after { content: ''; height: 0%; background: transparent; }
-                a { color: #000; }
-            }
-        }
-    }
-    &.scroll-active { pointer-events: none;
-        .logo { transform: translate(-90px, 0px); transition: .5s ease; opacity: 0; }
-        .menu--btn { transition: .5s ease; transform: translate(90px, 0px); opacity: 0; }
-    }
     .logo {
         position: absolute;
-        top: 1.6vw;
+        top: 8vw;
         left: 2vw;
-        width: 8vw;
+        width: calc(100vw - 4vw);
         line-height: 0px;
         transform: translate(0px, 0px);
         transition: .5s ease;
-        img {
-            transform-origin: left top;
-            transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98) 0s;
-            transform: translate3d(0 px , 0 px , 0 px ) scale(1);
+
+    }
+    &.active {
+        .logo { top: 1.6vw; left: 2vw; width: 8vw;
+            img {
+                transform-origin: left top;
+                transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98) 0s;
+                transform: translate3d(0 px , 0 px , 0 px ) scale(1);
+            }
         }
+        .text__toggle { opacity: 0; }
     }
     .menu--btn {
         width: 60px;
@@ -145,6 +134,139 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+.top__banner { position: relative; width: calc(100vw - 4vw); margin: 25vw auto 0; overflow: hidden; border: 1px solid #111; border-top: 0px;
+    .banner {
+        width: 100%;
+        margin-top:  13.4vw;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .top--marquee {
+        display: flex;
+        position: absolute;
+        top: 0%;
+        right: 0vw;
+        border: 1px solid #111;
+        background: #f0ede6;
+        animation: top-marquee 10s linear infinite;
+        .text {
+            width: fit-content;
+            padding: 0 1vw;
+            font-size: 10vw;
+            font-weight: 900;
+            font-family: 'logo';
+            font-style: italic;
+            white-space: nowrap;
+        }
+    }
+    .banner__marquee--text {
+        display: flex;
+        position: absolute;
+        top: -34vw;
+        left: -14vw;
+        border: 1px solid #111;
+        // background: #f0ede6;
+        animation: banner-marquee-01 10s linear infinite;
+        .text {
+            width: fit-content;
+            padding: 0 1vw;
+            font-size: 10vw;
+            font-weight: 900;
+            font-family: 'logo';
+            font-style: italic;
+            white-space: nowrap;
+        }
+    }
+    .banner--text {
+        position: absolute;
+        top: 15.5vw;
+        left: 50%;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 500;
+        transform: translate(-50%, 0%);
+        .text {
+            .text--inner {
+                padding: 0.5vw;
+                font-size: 60px;
+                font-style: italic;
+                font-weight: bold;
+                transform: translate3d(0px, 70px, 0px);
+            }
+        }
+        &.active {
+            .text { display: inline-block; overflow: hidden;
+                .text--inner { display: block; transform: translate3d(0px, 0px, 0px); transition: .5s ease; }
+                &:nth-child(2) {
+                    .text--inner { transition: 1s ease; }
+                 }
+                &:nth-child(3){
+                    .text--inner { transition: 1.5s ease; }
+                 }
+                &:nth-child(4) {
+                    .text--inner { transition: 2s ease; }
+                 }
+            }
+        }
+    }
+}
+.prologue {
+    &.active {
+        .prologue--text {
+            animation: 0.8s introTextAnimation forwards;
+            &.effect-blur { animation-delay: 0.4s; }
+            &.effect-line { animation-delay: 0.2s;
+                &::after { content: ''; animation: 0.5s TopBottomAnimation forwards; animation-delay: 2s; }
+            }
+            .inner-dot { animation: 1.5s dotAnimation forwards; animation-delay: 1s; }
+        }
+    }
+    .prologue--text {
+        position: relative;
+        height: 13vw;
+        line-height: 13vw;
+        font-size: 16vw;
+        font-family: $futura-logo;
+        color: $black-color;
+        letter-spacing: 15px;
+        text-transform: uppercase;
+        transition: 1s cubic-bezier(0.74, 0.51, 0.51, 1.26);
+        opacity: 0;
+        @include text-point;
+        &.effect-dot { width: 52vw;
+            .inner-dot {
+                position: absolute;
+                bottom: 0.15vw;
+                right: -9.5vw;
+                width: 4vw;
+                height: 3.4vw;
+                border-radius: 100%;
+                background: $primary-color;
+                transition: 1s cubic-bezier(0.32, 0.18, 0.26, 0.84);
+                opacity: 0;
+                box-shadow: 1px 1px 10px 0px #151414;
+            }
+        }
+        &.effect-blur { animation-delay: 0.4s; }
+        &.effect-line { animation-delay: 0.2s;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -4vw;
+                left: 29vw;
+                width: 30vw;
+                height: 8vw;
+                border-radius: 100px;
+                background: rgb(0, 54, 255, 0.8);
+                box-shadow: 1px 1px 1px 0px #151414;
+                transition: 1s ease-in-out;
+                opacity: 0;
             }
         }
     }
