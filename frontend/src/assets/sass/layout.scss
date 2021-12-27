@@ -19,7 +19,13 @@
             }
         }
         .text__toggle { opacity: 0;
-            .text__inner { animation-play-state: paused; }  
+            .text__inner { animation-play-state: paused; }
+        }
+        .menu__list {
+            .list { position: relative;
+                &:after { content: ''; height: 100%; background: $black-color; }
+                a { color: #fff; }
+            }
         }
     }
     .text__toggle {
@@ -57,11 +63,11 @@
                 left: 0px;
                 z-index: -1;
                 width: 100%;
-                height: 100%;
+                height: 0%;
                 transition: .4s ease;
-                background: $primary-color;
+                background: transparent;
             }
-            a { font-size: 20px; font-weight: bold; line-height: 0px; color: #fff; }
+            a { font-size: 20px; font-weight: bold; line-height: 0px; color: #111; }
         }
     }
     .logo {
