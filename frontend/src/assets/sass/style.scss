@@ -1,3 +1,63 @@
+
+@font-face {
+	font-family: 'logo';
+	src: local('logo'),
+    url('./assets/font/Futura_XBlk_BT.woff') format('woff'),
+	url('./assets/font/Futura_XBlk_BT.woff2') format('woff2');
+	unicode-range: U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+0041-005A, U+0061-007A, U+0030-0039;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'font';
+	font-weight: '900';
+	src: local('font'),
+	url('./assets/font/AppleSDGothicNeoH.woff2') format('woff2'),
+	url('./assets/font/AppleSDGothicNeoH.woff') format('woff');
+	unicode-range: U+AC00-D7A3;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'font';
+	font-weight: '800';
+	src: local('font'),
+	url('./assets/font/AppleSDGothicNeoEB.woff2') format('woff2'),
+	url('./assets/font/AppleSDGothicNeoEB.woff') format('woff');
+	unicode-range: U+AC00-D7A3;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'font';
+	font-weight: '700';
+	src: local('font'),
+	url('./assets/font/AppleSDGothicNeoB.woff2') format('woff2'),
+	url('./assets/font/AppleSDGothicNeoB.woff') format('woff');
+	unicode-range: U+AC00-D7A3;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'font';
+	font-weight: '500';
+	src: local('font'),
+	url('./assets/font/AppleSDGothicNeoM.woff2') format('woff2'),
+	url('./assets/font/AppleSDGothicNeoM.woff') format('woff');
+	unicode-range: U+AC00-D7A3;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'font';
+	font-weight: '300';
+	src: local('font'),
+	url('./assets/font/AppleSDGothicNeoL.woff2') format('woff2'),
+	url('./assets/font/AppleSDGothicNeoL.woff') format('woff');
+	unicode-range: U+AC00-D7A3;
+	font-display: fallback;
+}
+
 // VARIABLE
 
 $white-color: #fff;
@@ -47,18 +107,13 @@ $item-font-size: 10vw;
 	width: $width;
 	height: $height;
 }
-@mixin text-point {
-    text-shadow: 4px 4px 3px #111;
-    -webkit-text-stroke: 2px #111;
-    -webkit-text-fill-color: transparent;
-}
 @mixin border-line {
     border: 1px solid $border-color;
     box-sizing: border-box;
 }
 @mixin text-stroke {
-	text-shadow: 4px 4px 3px #111;
-	-webkit-text-stroke: 2px #111;
+	text-shadow: .2vw .2vw .2vw #111;
+	-webkit-text-stroke: .1vw #111;
 	-webkit-text-fill-color: transparent;
 }
 // KEYFRAMES
@@ -108,10 +163,9 @@ $item-font-size: 10vw;
 	0% { transform: rotate(3deg) translate3d(calc(25%), 0, 0); }
 	100% { transform: rotate(3deg) translate3d(calc(50%), 0, 0); }
 }
-@keyframes text-toggle {
-	0%  { transform: translate(0px, 20px); opacity: 0.5; }
-	50% { transform: translate(0px, -5px); opacity: 0.7; }
-	100% { transform: translate(0px, 0px); opacity: 1; }
+@keyframes text-toggle-marquee {
+	0%   { -webkit-transform: translate(0%);}
+ 	100% { -webkit-transform: translate(-100%);}
 }
 .container { background: $bg-color; }
 .cursor {
@@ -167,7 +221,7 @@ $item-font-size: 10vw;
 }
 /* 섹션 타이틀 */
 .section-title {
-	padding: 0 34vw;
+	padding: 10vw 34vw 0;
 	font-size: 5.56vw;
 	font-weight: bold;
 	color: #111;
