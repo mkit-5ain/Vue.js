@@ -1,63 +1,124 @@
 <template>
     <header id="header" class="header">
         <section class="text__toggle">
-            <span class="text">
-                <span>W</span>
-            </span>
-            <span class="text">
-                <span>e</span>
-            </span>
-            <span class="text">
-                <span>l</span>
-            </span>
-            <span class="text">
-                <span>c</span>
-            </span>
-            <span class="text">
-                <span>o</span>
-            </span>
-            <span class="text">
-                <span>m</span>
-            </span>
-            <span class="text">
-                <span>e</span>
-            </span>
-            <span class="text">
-                <span>t</span>
-            </span>
-            <span class="text">
-                <span>o</span>
-            </span>
-            <span class="text">
-                <span>t</span>
-            </span>
-            <span class="text">
-                <span>h</span>
-            </span>
-            <span class="text">
-                <span>i</span>
-            </span>
-            <span class="text">
-                <span>s</span>
-            </span>
-            <span class="text">
-                <span>p</span>
-            </span>
-            <span class="text">
-                <span>l</span>
-            </span>
-            <span class="text">
-                <span>a</span>
-            </span>
-            <span class="text">
-                <span>c</span>
-            </span>
-            <span class="text">
-                <span>e</span>
-            </span>
-            <span class="text">
-                <span>.</span>
-            </span>
+            <div class="text__inner">
+                <span class="text">
+                    <span>W</span>
+                </span>
+                <span class="text">
+                    <span>e</span>
+                </span>
+                <span class="text">
+                    <span>l</span>
+                </span>
+                <span class="text">
+                    <span>c</span>
+                </span>
+                <span class="text">
+                    <span>o</span>
+                </span>
+                <span class="text">
+                    <span>m</span>
+                </span>
+                <span class="text">
+                    <span>e</span>
+                </span>
+                <span class="text">
+                    <span>t</span>
+                </span>
+                <span class="text">
+                    <span>o</span>
+                </span>
+                <span class="text">
+                    <span>t</span>
+                </span>
+                <span class="text">
+                    <span>h</span>
+                </span>
+                <span class="text">
+                    <span>i</span>
+                </span>
+                <span class="text">
+                    <span>s</span>
+                </span>
+                <span class="text">
+                    <span>p</span>
+                </span>
+                <span class="text">
+                    <span>l</span>
+                </span>
+                <span class="text">
+                    <span>a</span>
+                </span>
+                <span class="text">
+                    <span>c</span>
+                </span>
+                <span class="text">
+                    <span>e</span>
+                </span>
+                <span class="text">
+                    <span>.</span>
+                </span>
+            </div>
+            <div class="text__inner">
+                <span class="text">
+                    <span>W</span>
+                </span>
+                <span class="text">
+                    <span>e</span>
+                </span>
+                <span class="text">
+                    <span>l</span>
+                </span>
+                <span class="text">
+                    <span>c</span>
+                </span>
+                <span class="text">
+                    <span>o</span>
+                </span>
+                <span class="text">
+                    <span>m</span>
+                </span>
+                <span class="text">
+                    <span>e</span>
+                </span>
+                <span class="text">
+                    <span>t</span>
+                </span>
+                <span class="text">
+                    <span>o</span>
+                </span>
+                <span class="text">
+                    <span>t</span>
+                </span>
+                <span class="text">
+                    <span>h</span>
+                </span>
+                <span class="text">
+                    <span>i</span>
+                </span>
+                <span class="text">
+                    <span>s</span>
+                </span>
+                <span class="text">
+                    <span>p</span>
+                </span>
+                <span class="text">
+                    <span>l</span>
+                </span>
+                <span class="text">
+                    <span>a</span>
+                </span>
+                <span class="text">
+                    <span>c</span>
+                </span>
+                <span class="text">
+                    <span>e</span>
+                </span>
+                <span class="text">
+                    <span>.</span>
+                </span>
+            </div>
         </section>
         <img class="logo" src="@/assets/image/common/full-logo.svg" alt="limjunesu">
         <ul class="menu__list">
