@@ -1,11 +1,12 @@
 body,a, * { cursor: none!important; }
 body {
     background: #f0ede6;
+    color: $black-color;
     &::-webkit-scrollbar {
         display: none;
     }
 }
-body,p,dl,ol,ul,li,dd,input,h1,h2,h3,h4,h5,h6 { margin: 0px; padding: 0px; color: $black-color; }
+body,p,dl,ol,ul,li,dd,input,h1,h2,h3,h4,h5,h6 { margin: 0px; padding: 0px; }
 ul,li,ol { list-style: none; }
 textarea { padding: 0px; resize: none; }
 img { vertical-align: top; }
