@@ -2,6 +2,7 @@
     <section class="typograph">
         JUNESU
     </section>
+    <ui-title></ui-title>
     <section class="top__banner">
         <div class="top--marquee">
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
@@ -9,7 +10,6 @@
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
         </div>
-        <img class="banner" src="@/assets/image/common/hedaer_bg.jpg" alt="">
         <div class="banner__marquee--text">
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
@@ -79,10 +79,6 @@
             <span class="text-stroke">LJS SO LJS?</span>
         </p>
     </section>
-    <section class="section-title">
-        DISCOVER
-        <div>#projects</div>
-    </section>
     <section class="work">
         <div class="work__list">
             <a class="work__list--link link" href=""></a>
@@ -100,100 +96,91 @@
 </template>
 
 <script>
-import gsap from 'gsap'
-import ScrollTrigger from "gsap/ScrollTrigger"
-gsap.registerPlugin(ScrollTrigger);
-export default {
-    name: 'Home',
-    // data: {
-    //     todos: []
-    // },
-    mounted:function () {
-        // this.getTodos();
-        this.sectionHandle();
-        gsap.to(".asof__preview--top_text", {
-            yPercent: 60,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".asof__preview",
-                scrub: 2
-            },
-        });
+    import Title from '@/components/Title.vue';
+    import gsap from 'gsap';
+    import ScrollTrigger from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to(".asof__preview--bottom_text", {
-            yPercent: -60,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".asof__preview",
-                scrub: 2
-            },
-        });
-
-        gsap.to(".left--direction", {
-            xPercent: 20,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".appeal",
-                scrub: 2,
-                start: "top center"
-            },
-        });
-
-        gsap.to(".right--direction", {
-            xPercent: -20,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".appeal",
-                scrub: 2,
-                start: "top center"
-            },
-        });
-
-        gsap.to(".card--image", {
-            xPercent: -7,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".card",
-                scrub: 1,
-                start: "top center"
-            },
-            rotation: -2
-        });
-
-        gsap.to(".card__info--text", {
-            xPercent: 7,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".card",
-                scrub: 1,
-                start: "top center"
-            },
-            rotation: 2
-        });
-
-    },
-    methods: {
-        // getTodos: function () {
-        //     let vm = this;
-        //     axios.get('@/assets/data/data.js')
-        //     .then(function(response) {
-        //         console.log(response.data);
-        //         vm.todos = response.data;
-        //     })
-        //     .catch(function(error) {
-        //         console.log(error);
-        //     })
-        // }
-        sectionHandle: function() {
-            const target = document.getElementById('scroll-handler');
-            const sectionTopValue = target.getBoundingClientRect();
-            const relativeTop = sectionTopValue.top + 600;
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > relativeTop) {
-                    target.classList.add('active');
-                }
+    export default {
+        name: 'Home',
+        components: {
+            'ui-title': Title
+        },
+        mounted:function () {
+            // this.getTodos();
+            this.sectionHandle();
+            gsap.to(".asof__preview--top_text", {
+                yPercent: 60,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".asof__preview",
+                    scrub: 2
+                },
             });
+
+            gsap.to(".asof__preview--bottom_text", {
+                yPercent: -60,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".asof__preview",
+                    scrub: 2
+                },
+            });
+
+            gsap.to(".left--direction", {
+                xPercent: 20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".appeal",
+                    scrub: 2,
+                    start: "top center"
+                },
+            });
+
+            gsap.to(".right--direction", {
+                xPercent: -20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".appeal",
+                    scrub: 2,
+                    start: "top center"
+                },
+            });
+
+            gsap.to(".card--image", {
+                xPercent: -7,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".card",
+                    scrub: 1,
+                    start: "top center"
+                },
+                rotation: -2
+            });
+
+            gsap.to(".card__info--text", {
+                xPercent: 7,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".card",
+                    scrub: 1,
+                    start: "top center"
+                },
+                rotation: 2
+            });
+
+        },
+        methods: {
+            sectionHandle: function() {
+                const target = document.getElementById('scroll-handler');
+                const sectionTopValue = target.getBoundingClientRect();
+                const relativeTop = sectionTopValue.top + 600;
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > relativeTop) {
+                        target.classList.add('active');
+                    }
+                });
+            }
         }
     }
-}
 </script>
