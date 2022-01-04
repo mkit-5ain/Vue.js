@@ -147,10 +147,11 @@
     margin-top: 30vw;
     background: #1d1d1b;
     color: #cdc6be;
-    font-size: 30.8vw;
-    letter-spacing: -5.7vw;
+    font-size: 28.64vw;
     font-weight: bold;
     font-family: 'logo';
+    letter-spacing: -4vw;
+    text-shadow: 10px 10px 20px #000;
 }
 .top__banner { position: relative; width: calc(100vw - 4vw); margin: 0 auto; padding-top: 25vw; overflow: hidden;
     .banner {
@@ -161,8 +162,8 @@
     .top--marquee {
         display: flex;
         position: absolute;
-        top: 25vw;
-        right: 0vw;
+        top: 0;
+        right: 0;
         animation: top-marquee 10s linear infinite;
         .text {
             width: fit-content;
