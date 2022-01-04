@@ -57,15 +57,14 @@
 	unicode-range: U+AC00-D7A3;
 	font-display: fallback;
 }
-
 // VARIABLE
 
 $white-color: #fff;
-$black-color: #111;
+$black-color: #1d1d1b;
 $primary-color: #0036ff;
 $second-color: #ddbe9f;
-$bg-color: #f0ede6;
-$border-color: #111;
+$bg-color: #cdc6be;
+$border-color: #1d1d1b;
 
 $size-s :14px;
 $size-m :18px;
@@ -87,7 +86,7 @@ $move-initial: calc(-25% + $offset);
 $move-final: calc(-50% + $offset);
 $item-font-size: 10vw;
 // MIXIN
-
+#app { background: $bg-color; }
 @mixin center { display: flex; justify-content: center; align-items: center; }
 @mixin between { display: flex; justify-content: space-between; align-items: center; }
 @mixin end { display: flex; justify-content: end; }
@@ -112,8 +111,8 @@ $item-font-size: 10vw;
     box-sizing: border-box;
 }
 @mixin text-stroke {
-	text-shadow: .2vw .2vw .2vw #111;
-	-webkit-text-stroke: .1vw #111;
+	text-shadow: .2vw .2vw .2vw $black-color;
+	-webkit-text-stroke: .1vw $black-color;
 	-webkit-text-fill-color: transparent;
 }
 // KEYFRAMES
