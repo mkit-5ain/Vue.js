@@ -136,7 +136,7 @@
 
 <script>
     export default {
-        name: 'header',
+        name: 'Header',
         mounted: function () {
             this.scroll();
         },
