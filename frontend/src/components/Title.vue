@@ -1,12 +1,18 @@
 <template>
     <section class="section-title">
-        DISCOVER
-        <div>#projects</div>
+        {{ title }}
+        <div>{{ nameTitle }}</div>
     </section>
 </template>
 <script>
     export default {
-        name: 'Title'
+        name: 'Title',
+        data () {
+            return {
+                title: 'discover',
+                nameTitle: '#projects'
+            }
+        }
     }
 </script>
 <style scope lang="scss">
@@ -15,13 +21,13 @@
     	padding: 10vw 34vw;
     	font-size: 5.56vw;
     	font-weight: bold;
-    	color: #111;
+    	color: #1d1d1b;
     	text-align: center;
     	letter-spacing: -7px;
     	text-transform: uppercase;
     	div {
     		position: relative;
-    		color: #fff;
+    		color: #cdc6be;
     		transform: rotate(1.2deg);
     		&:after {
     			content: '';
