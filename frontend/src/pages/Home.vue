@@ -2,7 +2,7 @@
     <section class="typograph">
         JUNESU
     </section>
-    <ui-title></ui-title>
+    <ui-title class="scroll-handler"></ui-title>
     <section class="top__banner">
         <div class="top--marquee">
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
@@ -10,14 +10,15 @@
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
         </div>
-        <div class="banner__marquee--text">
+        <!-- <div class="banner__marquee--text">
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
-        </div>
+        </div> -->
     </section>
-    <section id="scroll-handler" class="prologue">
+    <ui-title class="scroll-handler"></ui-title>
+    <section class="scroll-handler prologue">
         <div class="prologue--text text-stroke effect-dot">
             hello
             <span class="inner-dot"></span>
@@ -97,35 +98,25 @@
 
 <script>
     import Title from '@/components/Title.vue';
+
     import gsap from 'gsap';
     import ScrollTrigger from "gsap/ScrollTrigger";
     gsap.registerPlugin(ScrollTrigger);
 
     export default {
         name: 'Home',
+        data () {
+            return {
+                title: '',
+                nameTitle: ''
+            }
+        },
         components: {
             'ui-title': Title
         },
         mounted:function () {
             // this.getTodos();
-            this.sectionHandle();
-            gsap.to(".asof__preview--top_text", {
-                yPercent: 60,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".asof__preview",
-                    scrub: 2
-                },
-            });
-
-            gsap.to(".asof__preview--bottom_text", {
-                yPercent: -60,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".asof__preview",
-                    scrub: 2
-                },
-            });
+            window.addEventListener("scroll", this.sectionHandle);
 
             gsap.to(".left--direction", {
                 xPercent: 20,
@@ -171,15 +162,29 @@
 
         },
         methods: {
-            sectionHandle: function() {
-                const target = document.getElementById('scroll-handler');
-                const sectionTopValue = target.getBoundingClientRect();
-                const relativeTop = sectionTopValue.top + 600;
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > relativeTop) {
-                        target.classList.add('active');
+            // sectionHandle: function() {
+            //     const target = document.querySelectorAll('.scroll-handler');
+            //     const sectionTopValue = target.getBoundingClientRect();
+            //     const relativeTop = sectionTopValue.top - 500;
+            //     let i;
+            //     window.addEventListener('scroll', function () {
+            //         for (i = 0; i < target.length; i++) {
+            //             if (window.scrollY > relativeTop) {
+            //                 target[i].classList.add('active');
+            //             }
+            //         }
+            //     });
+            // }
+            sectionHandle: function () {
+                let target = document.querySelectorAll(".scroll-handler");
+                let targetPosition;
+                for ( let i = 0; i < target.length; i++ ) {
+                    targetPosition = target[i].getBoundingClientRect().top;
+                    let screenSize = window.innerHeight;
+                    if ( targetPosition < screenSize && !target[i].classList.contains("active") ) {
+                        target[i].classList.add("active");
                     }
-                });
+                }
             }
         }
     }
