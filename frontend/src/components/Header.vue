@@ -120,7 +120,7 @@
                 </span>
             </div>
         </section>
-        <img class="logo" src="@/assets/image/common/full-logo.svg" alt="limjunesu">
+        <!-- <img class="logo" src="@/assets/image/common/full-logo.svg" alt="limjunesu"> -->
         <ul class="menu__list">
             <li class="list scale"><router-link to="/">Home</router-link></li>
             <li class="list scale"><router-link to="/contact">Contact</router-link></li>

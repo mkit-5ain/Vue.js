@@ -1,5 +1,5 @@
 <template>
-    <section class="typograph">
+    <section class="typograph scroll-handler">
         JUNESU
     </section>
     <ui-title class="scroll-handler"></ui-title>
@@ -115,7 +115,6 @@
             'ui-title': Title
         },
         mounted:function () {
-            // this.getTodos();
             window.addEventListener("scroll", this.sectionHandle);
 
             gsap.to(".left--direction", {
@@ -162,19 +161,6 @@
 
         },
         methods: {
-            // sectionHandle: function() {
-            //     const target = document.querySelectorAll('.scroll-handler');
-            //     const sectionTopValue = target.getBoundingClientRect();
-            //     const relativeTop = sectionTopValue.top - 500;
-            //     let i;
-            //     window.addEventListener('scroll', function () {
-            //         for (i = 0; i < target.length; i++) {
-            //             if (window.scrollY > relativeTop) {
-            //                 target[i].classList.add('active');
-            //             }
-            //         }
-            //     });
-            // }
             sectionHandle: function () {
                 let target = document.querySelectorAll(".scroll-handler");
                 let targetPosition;
