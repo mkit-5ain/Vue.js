@@ -3,6 +3,7 @@
         JUNESU
     </section>
     <ui-title class="scroll-handler"></ui-title>
+    <section class="project"></section>
     <section class="top__banner">
         <div class="top--marquee">
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>

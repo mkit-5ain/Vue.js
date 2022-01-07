@@ -10,7 +10,7 @@
         data () {
             return {
                 title: 'discover',
-                nameTitle: '#projects'
+                nameTitle: '#discover'
             }
         }
     }
@@ -18,7 +18,9 @@
 <style scope lang="scss">
     $black-color: #1d1d1b;
     .section-title {
-    	padding: 10vw 34vw;
+        width: 35vw;
+    	padding: 10vw 0vw;
+        margin: 0 auto;
     	font-size: 5.56vw;
     	font-weight: bold;
     	color: #1d1d1b;
