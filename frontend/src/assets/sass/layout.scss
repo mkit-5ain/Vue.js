@@ -151,7 +151,7 @@
     font-weight: bold;
     font-family: 'logo';
     letter-spacing: -4vw;
-    text-shadow: 10px 10px 20px #000;
+    text-shadow: 10px 10px 10px #000;
 }
 .top__banner { position: relative; width: calc(100vw - 4vw); margin: 0 auto; padding-top: 25vw; overflow: hidden;
     .banner {
@@ -274,9 +274,6 @@
         display: flex;
         position: absolute;
         color: $black-color;
-        background: $white-color;
-        border-top: 1px solid #111;
-        border-bottom: 1px solid #111;
         &.marquee--2 { bottom: 60%;  left: -14vw; animation: banner-marquee-02 8s linear infinite; }
         &.marquee--3 { bottom: 50%;  right: 14vw;  animation: banner-marquee-03 8s linear infinite; }
         .text {
