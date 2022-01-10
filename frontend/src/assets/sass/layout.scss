@@ -150,7 +150,6 @@
     padding-top: 24vw;
     border-left: 4px solid $black-color;
     border-right: 4px solid $black-color;
-    box-sizing: border-box;
     overflow: hidden;
     &:before {
         content: 'welcome to my portfolio';
@@ -180,13 +179,14 @@
     }
 }
 .typograph {
-    width: 96vw;
+    width: 92vw;
     margin: 0 auto;
     background: #1d1d1b;
     color: #cdc6be;
-    font-size: 28.64vw;
+    font-size: 27.5vw;
     font-weight: bold;
     font-family: 'logo';
+    text-indent: 0.5vw;
     letter-spacing: -4vw;
     text-shadow: 10px 10px 10px #000;
 }
@@ -368,21 +368,17 @@
     }
 }
 
-.horizontal__scroll {
-    overflow-x: hidden;
-    .horizontal__scroll--pin {
-        display: flex;
-        position: relative;
-        z-index: 1;
-        height: 100vh;
-    }
+.horizontal__scroll { overflow-x: hidden;
+    .horizontal__scroll--pin { display: flex; position: relative; z-index: 1; height: 100vh; overflow: hidden; }
     .horizontal__scroll__items {
-        @extend .horizontal__scroll--pin;
+        display: flex; position: relative; z-index: 1; height: 100vh;
         &.to-right  { counter-reset: item; }
-        &.to-left { counter-reset: item 11;
-            &:before {
-                counter-increment: item -1;
-                content: counter(item);
+        &.to-left { counter-reset: item 21;
+            .item {
+                &:before {
+                    content: counter(item);
+                    counter-increment: item -1;
+                }
             }
         }
         .item {
