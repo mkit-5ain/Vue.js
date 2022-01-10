@@ -3,7 +3,22 @@
         JUNESU
     </section>
     <ui-title class="scroll-handler"></ui-title>
-    <section class="project"></section>
+    <section class="horizontal__scroll">
+        <div class="horizontal__scroll--pin">
+            <div class="horizontal__scroll__items to-right">
+                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
+                <div class="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
+                <div class="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
+                <div class="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
+                <div class="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
+                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
+                <div class="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
+                <div class="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
+                <div class="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
+                <div class="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
+            </div>
+        </div>
+    </section>
     <section class="top__banner">
         <div class="top--marquee">
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
@@ -11,14 +26,24 @@
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
             <div class="text text-stroke">WELCOME TO THIS PLACE</div>
         </div>
-        <!-- <div class="banner__marquee--text">
-            <div class="text text-stroke">WELCOME TO THIS PLACE</div>
-            <div class="text text-stroke">WELCOME TO THIS PLACE</div>
-            <div class="text text-stroke">WELCOME TO THIS PLACE</div>
-            <div class="text text-stroke">WELCOME TO THIS PLACE</div>
-        </div> -->
     </section>
     <ui-title class="scroll-handler"></ui-title>
+    <section class="horizontal__scroll">
+        <div class="horizontal__scroll--pin">
+            <div class="horizontal__scroll__items to-left">
+                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
+                <div class="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
+                <div class="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
+                <div class="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
+                <div class="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
+                <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, temporibus esse magni illum eos natus ipsum minus? Quis excepturi voluptates atque dolorum minus eligendi! Omnis minima magni recusandae ex dignissimos.</div>
+                <div class="item">Eaque ullam illum nobis deleniti mollitia unde, sed, nemo ipsa ratione ex, dicta aliquam voluptates! Odio vitae eum nobis dignissimos sunt ipsum repellendus totam optio distinctio. Laborum suscipit quia aperiam.</div>
+                <div class="item">Animi, porro molestias? Reiciendis dolor aspernatur ab quos nulla impedit, dolores ullam hic commodi nobis nam. Dolorem expedita laudantium dignissimos nobis a. Dolorem, unde quidem. Tempora et a quibusdam inventore!</div>
+                <div class="item">Labore, unde amet! Alias delectus hic laboriosam et dolorum? Saepe, dicta eaque? Veniam eos blanditiis neque. Officia et nostrum, tempore modi quo praesentium aspernatur vero dolor, ipsa unde perspiciatis minima.</div>
+                <div class="item">Quaerat error dolorem aspernatur magni dicta ut consequuntur maxime tempore. Animi odio eos quod culpa nulla consectetur? Aperiam ipsam ducimus delectus reprehenderit unde, non laborum voluptate laboriosam, officiis at ea!</div>
+            </div>
+        </div>
+    </section>
     <section class="scroll-handler prologue">
         <div class="prologue--text text-stroke effect-dot">
             hello
@@ -116,8 +141,8 @@
             'ui-title': Title
         },
         mounted:function () {
-            window.addEventListener("scroll", this.sectionHandle);
-
+            window.addEventListener("scroll", this.sectionHandle); // scroll addCLass
+            this.horizontalScroll(); // 가로 스크롤
             gsap.to(".left--direction", {
                 xPercent: 20,
                 ease: "none",
@@ -166,12 +191,35 @@
                 let target = document.querySelectorAll(".scroll-handler");
                 let targetPosition;
                 for ( let i = 0; i < target.length; i++ ) {
-                    targetPosition = target[i].getBoundingClientRect().top;
+                    targetPosition = target[i].getBoundingClientRect().top + 300;
                     let screenSize = window.innerHeight;
                     if ( targetPosition < screenSize && !target[i].classList.contains("active") ) {
                         target[i].classList.add("active");
                     }
                 }
+            },
+            horizontalScroll: function () {
+                const horizontalSections = gsap.utils.toArray('.horizontal__scroll')
+                horizontalSections.forEach(function (sec) {
+                    let thisPinWrap = sec.querySelector('.horizontal__scroll--pin');
+                    let thisAnimWrap = thisPinWrap.querySelector('.horizontal__scroll__items');
+                    let getToValue = () => - (thisAnimWrap.scrollWidth - window.innerWidth);
+
+                    gsap.fromTo(thisAnimWrap, {
+                        x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue()
+                    }, {
+                        x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() : 0,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: sec,
+                            start: "top top",
+                            end: () => "+=" + ( thisAnimWrap.scrollWidth - window.innerWidth ),
+                            pin: thisPinWrap,
+                            invalidateOnRefresh: true,
+                            scrub: true,
+                        }
+                    });
+                });
             }
         }
     }
