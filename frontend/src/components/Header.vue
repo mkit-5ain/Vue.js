@@ -147,9 +147,12 @@
                 let header = document.getElementById('header');
                 window.addEventListener("scroll", function() {
                     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    // if ( scrollTop < 1249 ) {
-                    //     header.classList.add('half');
-                    // }
+
+                    if ( scrollTop <= 0 ) {
+                        header.classList.remove('hide');
+                    } else if ( scrollTop < 1249 ) {
+                        header.classList.add('half');
+                    }
 
                     if ( scrollTop > 1250 && scrollTop > scroll ){
                         header.classList.add('hide');
