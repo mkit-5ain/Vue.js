@@ -14,6 +14,9 @@
     &.hide { transform: translate(0px, -126px); }
     &.half { padding: 1vw; }
     &.active {
+        &.half {
+            .logo { top: 1.35vw; }
+        }
         .logo { top: 2.35vw; left: 2vw; width: 12vw;
             img {
                 transform-origin: left top;
