@@ -86,7 +86,7 @@ $move-initial: calc(-25% + $offset);
 $move-final: calc(-50% + $offset);
 $item-font-size: 10vw;
 // MIXIN
-#app { background: $bg-color; }
+#app { margin-top: 150px; background: $bg-color; }
 @mixin center { display: flex; justify-content: center; align-items: center; }
 @mixin between { display: flex; justify-content: space-between; align-items: center; }
 @mixin end { display: flex; justify-content: end; }

@@ -44,6 +44,17 @@
             </div>
         </div>
     </section>
+    <section class="appeal">
+        <p class="appeal--text left--direction">
+            <span class="text-stroke">WANT TO KNOW</span>
+        </p>
+        <p class="appeal--text right--direction">
+            <span class="text-stroke">WHAT<img class="appeal--image" src="@/assets/image/common/junesu.png" alt="">MAKES</span>
+        </p>
+        <p class="appeal--text left--direction">
+            <span class="text-stroke">LJS SO LJS?</span>
+        </p>
+    </section>
     <section class="scroll-handler prologue">
         <div class="prologue--text text-stroke effect-dot">
             hello
@@ -95,31 +106,7 @@
             </div>
         </div>
     </section>
-    <section class="appeal">
-        <p class="appeal--text left--direction">
-            <span class="text-stroke">WANT TO KNOW</span>
-        </p>
-        <p class="appeal--text right--direction">
-            <span class="text-stroke">WHAT<img class="appeal--image" src="@/assets/image/common/junesu.png" alt="">MAKES</span>
-        </p>
-        <p class="appeal--text left--direction">
-            <span class="text-stroke">LJS SO LJS?</span>
-        </p>
-    </section>
-    <section class="work">
-        <div class="work__list">
-            <a class="work__list--link link" href=""></a>
-            <img class="work__list--img" src="" alt=""/>
-            <div class="work__list--marquee">
-                <div class="marquee--text">
-                    <div class="text">1</div>
-                    <div class="text">2</div>
-                    <div class="text">3</div>
-                    <div class="text">4</div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 </template>
 
 <script>

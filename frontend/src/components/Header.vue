@@ -138,10 +138,28 @@
     export default {
         name: 'Header',
         mounted: function () {
-            this.scroll();
+            this.headerScroll();
+            this.headerUpDown();
         },
         methods: {
-            scroll: function () {
+            headerUpDown: function () {
+                let scroll = 0;
+                let header = document.getElementById('header');
+                window.addEventListener("scroll", function() {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    // if ( scrollTop < 1249 ) {
+                    //     header.classList.add('half');
+                    // }
+
+                    if ( scrollTop > 1250 && scrollTop > scroll ){
+                        header.classList.add('hide');
+                    } else {
+                        header.classList.remove('hide');
+                    }
+
+                }, false);
+            },
+            headerScroll: function () {
                 let scroll = 0;
                 let header = document.getElementById('header');
                 window.addEventListener('scroll', function () {
@@ -150,6 +168,7 @@
                         header.classList.add('active');
                     } else if (scroll == 0 ) {
                         header.classList.remove('active');
+                        header.classList.remove('half');
                     }
                 });
             }
