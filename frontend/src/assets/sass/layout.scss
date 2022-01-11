@@ -1,17 +1,20 @@
 #header {
     @include end;
-    position: fixed;
+    position: sticky;
     top: 0px;
     left: 0px;
-    width: calc(100% - 4vw);
-    padding: 1vw 2vw;
-    border-bottom: 4px solid $black-color;
+    width: calc(100% - 10vw);
+    padding: 2vw 1vw;
+    margin: 0 auto;
+    border: 4px solid $black-color;
     background: $bg-color;
     text-align: center;
     transition: .5s ease;
     z-index: 11;
+    &.hide { transform: translate(0px, -126px); }
+    &.half { padding: 1vw; }
     &.active {
-        .logo { top: 1.6vw; left: 2vw; width: 8vw;
+        .logo { top: 2.35vw; left: 2vw; width: 12vw;
             img {
                 transform-origin: left top;
                 transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98) 0s;
@@ -24,14 +27,14 @@
         .menu__list {
             .list { position: relative;
                 &:after { content: ''; height: 100%; background: $black-color; }
-                a { color: #fff; }
+                a { color: $bg-color; }
             }
         }
     }
     .text__toggle {
         display: flex;
         position: absolute;
-        top: 1.3vw;
+        top: 2.3vw;
         left: 2vw;
         width: 15vw;
         font-size: 20px;
@@ -72,8 +75,8 @@
     }
     .logo {
         position: absolute;
-        top: 8vw;
-        left: 6vw;
+        top: 10vw;
+        left: 2vw;
         width: calc(100vw - 12vw);
         line-height: 0px;
         transform: translate(0px, 0px);
@@ -147,7 +150,7 @@
     position: relative;
     width: calc(100% - 8vw);
     margin: 0 auto;
-    padding-top: 24vw;
+    padding-top: 19vw;
     border-left: 4px solid $black-color;
     border-right: 4px solid $black-color;
     overflow: hidden;
@@ -355,8 +358,8 @@
     align-content: center;
     overflow: hidden;
     // transform: rotate(-5deg);
-    .appeal--text { color: #111; font-size: 10vw; font-family: 'logo';
-        .appeal--image { width: 7.2vw; padding: 0px 10px; vertical-align: baseline; transition: .3s ease-in-out; filter: blur(2px); }
+    .appeal--text { color: #111; font-size: 7vw; font-family: 'logo';
+        .appeal--image { width: 5.1vw; padding: 0px 10px; vertical-align: baseline; transition: .3s ease-in-out; filter: blur(2px); }
         span { display: inline-block; transition: .3s ease-in-out; }
         &:nth-child(2){
             span {
