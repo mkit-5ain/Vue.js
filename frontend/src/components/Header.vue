@@ -138,8 +138,8 @@
     export default {
         name: 'Header',
         mounted: function () {
-            this.headerScroll();
             this.headerUpDown();
+            this.headerScroll();
         },
         methods: {
             headerUpDown: function () {
@@ -148,18 +148,17 @@
                 window.addEventListener("scroll", function() {
                     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                    if ( scrollTop <= 0 ) {
+                    if ( scrollTop <= 200 ) {
                         header.classList.remove('hide');
-                    } else if ( scrollTop < 1249 ) {
+                    } else if ( scrollTop < 1400 ) {
                         header.classList.add('half');
-                    }
-
-                    if ( scrollTop > 1250 && scrollTop > scroll ){
+                    } else if ( scrollTop > 1450 && scrollTop > scroll ){
                         header.classList.add('hide');
                     } else {
                         header.classList.remove('hide');
                     }
 
+                    scroll = scrollTop <= 0 ? 0 : scrollTop;
                 }, false);
             },
             headerScroll: function () {
