@@ -191,7 +191,7 @@
     color: #cdc6be;
     font-size: 27.5vw;
     font-weight: bold;
-    font-family: 'logo';
+    font-family: $logo;
     text-indent: 0.5vw;
     letter-spacing: -4vw;
     text-shadow: 10px 10px 10px #000;
@@ -251,7 +251,7 @@
         height: 13vw;
         line-height: 13vw;
         font-size: 15vw;
-        font-family: 'logo';
+        font-family: $logo;
         color: $black-color;
         letter-spacing: 15px;
         text-transform: uppercase;
@@ -361,7 +361,7 @@
     align-content: center;
     overflow: hidden;
     // transform: rotate(-5deg);
-    .appeal--text { color: #111; font-size: 7vw; font-family: 'logo';
+    .appeal--text { color: #111; font-size: 7vw; font-family: $logo;
         .appeal--image { width: 5.1vw; padding: 0px 10px; vertical-align: baseline; transition: .3s ease-in-out; filter: blur(2px); }
         span { display: inline-block; transition: .3s ease-in-out; }
         &:nth-child(2){
@@ -379,7 +379,7 @@
     .horizontal__scroll__items {
         display: flex; position: relative; z-index: 1; height: 100vh;
         &.to-right  { counter-reset: item; }
-        &.to-left { counter-reset: item 21;
+        &.to-left { counter-reset: item 11;
             .item {
                 &:before {
                     content: counter(item);
@@ -390,27 +390,30 @@
         .item {
             position: relative;
             display: flex;
-            padding: 150px 80px;
-            flex: 0 0 500px;
-            height: calc(100vh - 300px);
-            align-items: center;
+            flex: 0 0 100vw;
             line-height: 1.7;
-            user-select: none;
+            padding: 0px 80px;
             border-right: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 13vw;
+            font-weight: bold;
+            font-family: $logo;
+            text-transform: uppercase;
+            align-items: center;
+            user-select: none;
             background-color: transparent;
             &:before {
                 position: absolute;
-                font-size: 100px;
-                opacity: .13;
-                font-weight: bold;
+                bottom: 10%;
                 z-index: -1;
-                transform: translate(-30px, -50px);
                 line-height: 1;
+                font-size: 100px;
+                font-weight: bold;
+                opacity: .13;
                 counter-increment: item;
                 content: counter(item);
             }
-            &:nth-child(2n+2) { align-items: flex-start; }
-            &:nth-child(4n+4) { align-items: flex-end; }
+            // &:nth-child(2n+2) { align-items: flex-start; }
+            // &:nth-child(4n+4) { align-items: flex-end; }
         }
     }
 }
