@@ -75,7 +75,7 @@
             <div class="text text-stroke">ALWAYS IMPROVE</div>
             <div class="text text-stroke">ALWAYS IMPROVE</div>
         </div>
-        <div class="card--image"><img src="@/assets/image/common/card.jpg" alt=""></div>
+        <!-- <div class="card--image"><img src="@/assets/image/common/card.jpg" alt=""></div>
         <div class="card__info--text">
             <p>ALWAYS IMPROVE,</p>
             <p>NEVER</p>
@@ -94,7 +94,7 @@
                 <p>letting our imagination run free and our</p>
                 <p>true colors shine through.</p>
             </div>
-        </div>
+        </div> -->
     </section>
 
 </template>
