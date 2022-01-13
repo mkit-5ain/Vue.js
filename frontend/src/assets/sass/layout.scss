@@ -411,6 +411,9 @@
                 opacity: .13;
                 counter-increment: item;
                 content: counter(item);
+                text-shadow: 0.2vw 0.2vw 0.2vw #1d1d1b;
+                -webkit-text-stroke: 0.1vw #1d1d1b;
+                -webkit-text-fill-color: transparent;
             }
             // &:nth-child(2n+2) { align-items: flex-start; }
             // &:nth-child(4n+4) { align-items: flex-end; }
