@@ -196,7 +196,7 @@
     letter-spacing: -4vw;
     text-shadow: 10px 10px 10px #000;
 }
-.top__banner {
+.text__marquee__wrap {
     position: relative;
     width: 96vw;
     height: 14.6vw;
@@ -204,12 +204,27 @@
     border-top: 4px solid $black-color;
     border-bottom: 4px solid $black-color;
     overflow: hidden;
-    .top--marquee {
+    .text__marquee--left {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: left-marquee 10s linear infinite;
+        .text {
+            width: fit-content;
+            padding: 0 1vw;
+            font-size: 10vw;
+            font-weight: 900;
+            font-style: italic;
+            white-space: nowrap;
+        }
+    }
+    .text__marquee--right {
         display: flex;
         position: absolute;
         top: 0;
         right: 0;
-        animation: top-marquee 10s linear infinite;
+        animation: right-marquee 10s linear infinite;
         .text {
             width: fit-content;
             padding: 0 1vw;
@@ -310,46 +325,6 @@
         &:nth-child(1) { left: 20%; animation-delay: 0.1s; }
         &:nth-child(2) { animation-delay: 0.3s; }
         &:nth-child(3) { left: auto; right: 20%; animation-delay: 0.5s; }
-    }
-}
-.card { position: relative; height: 100vw; overflow: hidden;
-    .card__marquee--text {
-        display: flex;
-        position: absolute;
-        color: $black-color;
-        &.marquee--2 { bottom: 60%;  left: -14vw; animation: banner-marquee-02 8s linear infinite; }
-        &.marquee--3 { bottom: 50%;  right: 14vw;  animation: banner-marquee-03 8s linear infinite; }
-        .text {
-            width: fit-content;
-            font-size: 10vw;
-            font-weight: 900;
-            font-style: italic;
-            white-space: nowrap;
-        }
-    }
-    .card--image { position: absolute; top: 50%; left: 50%; transform: translate(-85%, -50%) rotate(5deg);
-        img { width: 700px; @include border-line; }
-    }
-    .card__info--text {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(97%, -50%) rotate(-1deg);
-        width: 700px;
-        line-height: 50px;
-        padding: 200px 0px 200px 80px;
-        letter-spacing: -6px;
-        color: $white-color;
-        font-size: 60px;
-        font-weight: bold;
-        background: $black-color;
-        .inner--text {
-            line-height: normal;
-            padding-top: 40px;
-            letter-spacing: 0px;
-            font-size: 24px;
-            font-weight: normal;
-        }
     }
 }
 .appeal {
