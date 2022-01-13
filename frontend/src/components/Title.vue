@@ -27,8 +27,14 @@
     	text-align: center;
     	letter-spacing: -7px;
     	text-transform: uppercase;
-        &.active {
-            div { color: #cdc6be; transform: rotate(2deg); }
+        opacity: 0;
+        transform: translate( 0px, 50px);
+        transition: 1s ease;
+        &.active { transform: translate( 0px, 0px); opacity: 1;
+            div {
+                color: #cdc6be;
+                transform: rotate(2deg);
+            }
         }
     	div {
             position: relative;
