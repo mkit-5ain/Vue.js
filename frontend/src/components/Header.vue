@@ -1,7 +1,6 @@
 <template>
     <header id="header" class="header">
-        <seciont class="header__inner__wrap">
-        <!-- <section class="text__toggle">
+        <section class="text__toggle">
             <div class="text__inner">
                 <span class="text">
                     <span>W</span>
@@ -131,8 +130,7 @@
             <a href="https://github.com/mkit-5ain" target="_blank">
                 <img src="@/assets/image/common/github.png" alt="">
             </a>
-        </button> -->
-        </seciont>
+        </button>
     </header>
 </template>
 

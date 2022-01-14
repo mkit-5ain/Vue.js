@@ -23,6 +23,18 @@
         <div class="loading--circle"></div>
         <div class="loading--circle"></div>
     </section>
+    <section class="scroll-handler prologue">
+        <div class="prologue--text text-stroke effect-dot">
+            hello
+            <span class="inner-dot"></span>
+        </div>
+        <div class="prologue--text text-stroke effect-line">
+            <span>my style</span>
+        </div>
+        <div class="prologue--text text-stroke effect-blur">
+            <span>trust me.</span>
+        </div>
+    </section>
     <ui-title class="scroll-handler"></ui-title>
     <section class="horizontal__scroll">
         <div class="horizontal__scroll--pin">
@@ -65,18 +77,6 @@
         <p class="appeal--text left--direction">
             <span class="text-stroke">LJS SO LJS?</span>
         </p>
-    </section>
-    <section class="scroll-handler prologue">
-        <div class="prologue--text text-stroke effect-dot">
-            hello
-            <span class="inner-dot"></span>
-        </div>
-        <div class="prologue--text text-stroke effect-line">
-            <span>my style</span>
-        </div>
-        <div class="prologue--text text-stroke effect-blur">
-            <span>trust me.</span>
-        </div>
     </section>
 </template>
 
